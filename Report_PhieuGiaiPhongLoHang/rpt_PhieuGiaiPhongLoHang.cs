@@ -608,12 +608,14 @@ public class rpt_PhieuGiaiPhongLoHang : XtraReport, IReport
 			// 
 			// xrLabel23
 			// 
+			this.xrLabel23.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table1.NgayHoaDon]")});
 			this.xrLabel23.Font = new System.Drawing.Font("Times New Roman", 12F);
-			this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(984.7157F, 60.37502F);
+			this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(984.7158F, 60.37502F);
 			this.xrLabel23.Multiline = true;
 			this.xrLabel23.Name = "xrLabel23";
 			this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-			this.xrLabel23.SizeF = new System.Drawing.SizeF(113.0002F, 23F);
+			this.xrLabel23.SizeF = new System.Drawing.SizeF(144.2844F, 23F);
 			this.xrLabel23.StylePriority.UseFont = false;
 			this.xrLabel23.StylePriority.UseTextAlignment = false;
 			this.xrLabel23.Text = "\r\n";
@@ -623,10 +625,10 @@ public class rpt_PhieuGiaiPhongLoHang : XtraReport, IReport
 			this.xrLabel22.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table1.SoHoaDon]")});
 			this.xrLabel22.Font = new System.Drawing.Font("Times New Roman", 12F);
-			this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(984.7158F, 26.00004F);
+			this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(984.7159F, 26.00006F);
 			this.xrLabel22.Name = "xrLabel22";
 			this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-			this.xrLabel22.SizeF = new System.Drawing.SizeF(113F, 23F);
+			this.xrLabel22.SizeF = new System.Drawing.SizeF(144.2841F, 22.99999F);
 			this.xrLabel22.StylePriority.UseFont = false;
 			this.xrLabel22.StylePriority.UseTextAlignment = false;
 			this.xrLabel22.Text = "xrLabel22";
@@ -646,6 +648,8 @@ public class rpt_PhieuGiaiPhongLoHang : XtraReport, IReport
 			// 
 			// xrLabel20
 			// 
+			this.xrLabel20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table1.DienThoaiLienLac]")});
 			this.xrLabel20.Font = new System.Drawing.Font("Times New Roman", 12F);
 			this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(849.4089F, 182.2501F);
 			this.xrLabel20.Name = "xrLabel20";
@@ -682,6 +686,8 @@ public class rpt_PhieuGiaiPhongLoHang : XtraReport, IReport
 			// 
 			// xrLabel17
 			// 
+			this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table1.ThoiGianGiaoHang]")});
 			this.xrLabel17.Font = new System.Drawing.Font("Times New Roman", 12F);
 			this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(208.0902F, 217.6667F);
 			this.xrLabel17.Name = "xrLabel17";
