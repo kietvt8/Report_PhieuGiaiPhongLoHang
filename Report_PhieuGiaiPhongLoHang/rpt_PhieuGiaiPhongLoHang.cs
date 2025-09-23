@@ -215,13 +215,14 @@ public class rpt_PhieuGiaiPhongLoHang : XtraReport, IReport
 
 	private void rpt_PhieuXuatKhoKiemHanDung_BeforePrint(object sender, PrintEventArgs e)
 	{
-		Thread.CurrentThread.CurrentCulture = new CultureInfo("vi-VN");
-		Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi-VN");
-		string s = DataExtensions.FirstRow(dset.Tables[0])["Logo"].ToString();
-		byte[] buffer = Convert.FromBase64String(s);
-		Stream stream = new MemoryStream(buffer);
-		Image image = Image.FromStream(stream);
-		xrPictureBox1.Image = image;
+		string text = dset.Tables["Table1"].Rows[0]["Logo"].ToString();
+		if (text != "")
+		{
+			byte[] buffer = Convert.FromBase64String(text);
+			Stream stream = new MemoryStream(buffer);
+			Image image = Image.FromStream(stream);
+			xrPictureBox1.Image = image;
+		}
 	}
 
 	protected override void Dispose(bool disposing)
@@ -733,10 +734,11 @@ public class rpt_PhieuGiaiPhongLoHang : XtraReport, IReport
 			this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 26.00002F);
 			this.xrPictureBox1.Name = "xrPictureBox1";
 			this.xrPictureBox1.SizeF = new System.Drawing.SizeF(63.41667F, 57.375F);
+			this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
 			// 
 			// xrTable1
 			// 
-			this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+		this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
 			this.xrTable1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
